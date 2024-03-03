@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import Image from 'next/image';
 import Link from 'next/link';
 import profileDefault from '@/assets/images/profile.png';
