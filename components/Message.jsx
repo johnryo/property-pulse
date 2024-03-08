@@ -15,11 +15,10 @@ const Message = ({ message }) => {
       const res = await fetch(`/api/messages/${message._id}`, {
         method: 'PUT',
       });
-
       if (res.status === 200) {
         const { read } = await res.json();
         setIsRead(read);
-        setUnreadCount((prevCount) => (read ? prevCount - 1 : prevCount + 1));
+        // setUnreadCount((prevCount) => (read ? prevCount - 1 : prevCount + 1));
         if (read) {
           toast.success('Marked as read');
         } else {
@@ -40,12 +39,12 @@ const Message = ({ message }) => {
 
       if (res.status === 200) {
         setIsDeleted(true);
-        setUnreadCount((prevCount) => prevCount - 1);
+        // setUnreadCount((prevCount) => prevCount - 1);
         toast.success('Message Deleted');
       }
     } catch (error) {
       console.log(error);
-      toast.error('Message was not deleted');
+      toast.error('Message was not deleted.');
     }
   };
 

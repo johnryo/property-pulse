@@ -62,7 +62,7 @@ const PropertyContactForm = ({ property }) => {
       {!session ? (
         <p className='text-center'>You must be logged in to send a message.</p>
       ) : wasSubmitted ? (
-        <p className='text-green-500 mb-4'>
+        <p className='text-green-500 text-center mb-4'>
           Your message has been sent successfully.
         </p>
       ) : (
